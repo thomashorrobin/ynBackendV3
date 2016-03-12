@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: ynBackendV3_production
-  username: ynBackendV3
+  username: root
   password: <%= ENV['YNBACKENDV3_DATABASE_PASSWORD'] %>
