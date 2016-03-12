@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Execs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @execs.each do |exec| %>
+      <tr>
+        <td><%= exec.name %></td>
+        <td><%= link_to 'Show', exec %></td>
+        <td><%= link_to 'Edit', edit_exec_path(exec) %></td>
+        <td><%= link_to 'Destroy', exec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exec', new_exec_path %>

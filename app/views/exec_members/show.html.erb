@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Possition:</strong>
+  <%= @exec_member.possition %>
+</p>
+
+<p>
+  <strong>Exec:</strong>
+  <%= @exec_member.Exec %>
+</p>
+
+<p>
+  <strong>Individual:</strong>
+  <%= @exec_member.Individual %>
+</p>
+
+<%= link_to 'Edit', edit_exec_member_path(@exec_member) %> |
+<%= link_to 'Back', exec_members_path %>

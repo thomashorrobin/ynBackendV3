@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exec Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Possition</th>
+      <th>Exec</th>
+      <th>Individual</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exec_members.each do |exec_member| %>
+      <tr>
+        <td><%= exec_member.possition %></td>
+        <td><%= exec_member.Exec %></td>
+        <td><%= exec_member.Individual %></td>
+        <td><%= link_to 'Show', exec_member %></td>
+        <td><%= link_to 'Edit', edit_exec_member_path(exec_member) %></td>
+        <td><%= link_to 'Destroy', exec_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exec member', new_exec_member_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@exec_member) do |f| %>
+  <% if @exec_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exec_member.errors.count, "error") %> prohibited this exec_member from being saved:</h2>
+
+      <ul>
+      <% @exec_member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :possition %><br>
+    <%= f.text_field :possition %>
+  </div>
+  <div class="field">
+    <%= f.label :Exec_id %><br>
+    <%= f.text_field :Exec_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Individual_id %><br>
+    <%= f.text_field :Individual_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

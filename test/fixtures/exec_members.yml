@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  possition: MyString
+  Exec_id: 
+  Individual_id: 
+
+two:
+  possition: MyString
+  Exec_id: 
+  Individual_id: 

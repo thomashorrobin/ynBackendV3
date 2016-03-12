@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YnBackendV3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= link_to 'Announcements', announcements_path %>
+<%= link_to 'Events', events_path %>
+<%= link_to 'Blogs', blogs_path %>
+<%= link_to 'Blog Posts', blog_posts_path %>
+<%= link_to 'Execs', execs_path %>
+<%= link_to 'People', individuals_path %>
+<%= link_to 'Cities', cities_path %>
+<%= link_to 'Exec Members', exec_members_path %>
+
+<%= yield %>
+
+</body>
+</html>
