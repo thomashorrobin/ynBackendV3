@@ -52,5 +52,5 @@ production:
   <<: *default
   database: ynBackendV3_production
   username: rails
-  password: <%= ENV['YNBACKENDV3_DATABASE_PASSWORD'] %>
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
   adapter: postgresql
