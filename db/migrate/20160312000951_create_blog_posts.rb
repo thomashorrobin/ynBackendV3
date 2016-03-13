@@ -4,8 +4,8 @@ class CreateBlogPosts < ActiveRecord::Migration
       t.string :title
       t.string :content
       t.date :posted_on
-      t.references :Blog, index: true, foreign_key: true
-      t.references :Individual, index: true, foreign_key: true
+      t.references :blog, index: true, foreign_key: true
+      t.references :individual, index: true, foreign_key: true
 
       t.timestamps null: false
     end
