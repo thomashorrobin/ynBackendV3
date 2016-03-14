@@ -17,12 +17,12 @@
 
 <p>
   <strong>Blog:</strong>
-  <%= @blog_post.Blog %>
+  <%= @blog_post.Blog.name %>
 </p>
 
 <p>
   <strong>Individual:</strong>
-  <%= @blog_post.Individual %>
+  <%= @blog_post.Individual.full_name %>
 </p>
 
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |

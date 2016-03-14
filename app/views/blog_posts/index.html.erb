@@ -20,8 +20,8 @@
         <td><%= blog_post.title %></td>
         <td><%= blog_post.content %></td>
         <td><%= blog_post.posted_on %></td>
-        <td><%= blog_post.Blog %></td>
-        <td><%= blog_post.Individual %></td>
+        <td><%= blog_post.Blog.name %></td>
+        <td><%= blog_post.Individual.full_name %></td>
         <td><%= link_to 'Show', blog_post %></td>
         <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
         <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

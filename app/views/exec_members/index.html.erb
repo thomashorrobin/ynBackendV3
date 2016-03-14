@@ -16,8 +16,8 @@
     <% @exec_members.each do |exec_member| %>
       <tr>
         <td><%= exec_member.possition %></td>
-        <td><%= exec_member.Exec %></td>
-        <td><%= exec_member.Individual %></td>
+        <td><%= exec_member.Exec.name %></td>
+        <td><%= exec_member.Individual.full_name %></td>
         <td><%= link_to 'Show', exec_member %></td>
         <td><%= link_to 'Edit', edit_exec_member_path(exec_member) %></td>
         <td><%= link_to 'Destroy', exec_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>

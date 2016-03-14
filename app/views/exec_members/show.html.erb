@@ -7,12 +7,12 @@
 
 <p>
   <strong>Exec:</strong>
-  <%= @exec_member.Exec %>
+  <%= @exec_member.Exec.name %>
 </p>
 
 <p>
   <strong>Individual:</strong>
-  <%= @exec_member.Individual %>
+  <%= @exec_member.Individual.full_name %>
 </p>
 
 <%= link_to 'Edit', edit_exec_member_path(@exec_member) %> |

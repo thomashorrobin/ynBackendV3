@@ -17,7 +17,7 @@
   <tbody>
     <% @apple_phones.each do |apple_phone| %>
       <tr>
-        <td><%= apple_phone.City %></td>
+        <td><%= apple_phone.City.name %></td>
         <td><%= apple_phone.first_name %></td>
         <td><%= apple_phone.last_name %></td>
         <td><%= apple_phone.email %></td>
