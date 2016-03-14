@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @apple_phone.City %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @apple_phone.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @apple_phone.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @apple_phone.email %>
+</p>
+
+<p>
+  <strong>Device token:</strong>
+  <%= @apple_phone.device_token %>
+</p>
+
+<%= link_to 'Edit', edit_apple_phone_path(@apple_phone) %> |
+<%= link_to 'Back', apple_phones_path %>

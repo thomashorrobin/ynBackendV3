@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Apple Phones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Device token</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apple_phones.each do |apple_phone| %>
+      <tr>
+        <td><%= apple_phone.City %></td>
+        <td><%= apple_phone.first_name %></td>
+        <td><%= apple_phone.last_name %></td>
+        <td><%= apple_phone.email %></td>
+        <td><%= apple_phone.device_token %></td>
+        <td><%= link_to 'Show', apple_phone %></td>
+        <td><%= link_to 'Edit', edit_apple_phone_path(apple_phone) %></td>
+        <td><%= link_to 'Destroy', apple_phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apple phone', new_apple_phone_path %>

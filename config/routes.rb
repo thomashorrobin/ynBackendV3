@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :apple_phones
+  resources :apple_phones
   get 'home/index'
 
   resources :events

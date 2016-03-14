@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312001548) do
+ActiveRecord::Schema.define(version: 20160314060644) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "announced_at"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 20160312001548) do
   end
 
   add_index "announcements", ["Exec_id"], name: "index_announcements_on_Exec_id", using: :btree
+
+  create_table "apple_phones", force: :cascade do |t|
+    t.integer  "City_id",      limit: 4
+    t.string   "first_name",   limit: 255
+    t.string   "last_name",    limit: 255
+    t.string   "email",        limit: 255
+    t.string   "device_token", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "apple_phones", ["City_id"], name: "index_apple_phones_on_City_id", using: :btree
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title",         limit: 255
@@ -87,6 +99,7 @@ ActiveRecord::Schema.define(version: 20160312001548) do
   end
 
   add_foreign_key "announcements", "Execs"
+  add_foreign_key "apple_phones", "Cities"
   add_foreign_key "blog_posts", "Blogs"
   add_foreign_key "blog_posts", "Individuals"
   add_foreign_key "events", "Cities"
