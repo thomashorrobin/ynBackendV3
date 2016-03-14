@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :City_id %><br>
-    <%= f.text_field :City_id %>
+    <%= f.collection_select :City_id, City.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :address %><br>

@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :Exec_id %><br>
-    <%= f.text_field :Exec_id %>
+    <%= f.collection_select :Exec_id, Exec.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
